@@ -6,6 +6,10 @@
 <title>Main Smash Burgers</title>
 
 <style>
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin:0;
     font-family: Arial, sans-serif;
@@ -19,6 +23,9 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
 }
 
 .logo{
@@ -33,6 +40,10 @@ nav a{
     font-weight:bold;
 }
 
+nav a:hover{
+    color:#f4b400;
+}
+
 .order-btn{
     background:#f4b400;
     color:black;
@@ -40,15 +51,16 @@ nav a{
     border-radius:5px;
 }
 
+section{
+    padding:120px 40px 80px;
+}
+
 .hero{
     text-align:center;
-    padding:60px 20px;
-    background:#000;
 }
 
 .hero h1{
     font-size:60px;
-    margin-bottom:20px;
 }
 
 .hero button{
@@ -58,10 +70,6 @@ nav a{
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
-}
-
-.menu-section{
-    padding:50px 40px;
 }
 
 .menu-title{
@@ -80,23 +88,27 @@ nav a{
 .menu-item{
     width:400px;
     text-align:center;
+    cursor:pointer;
 }
 
 .menu-item img{
     width:100%;
     border-radius:10px;
+    transition:0.3s;
 }
 
-.menu-item h3{
-    margin-top:15px;
-    font-size:28px;
+.menu-item img:hover{
+    transform:scale(1.05);
+}
+
+.contact{
+    text-align:center;
 }
 
 footer{
     background:#111;
     text-align:center;
     padding:20px;
-    margin-top:50px;
 }
 </style>
 </head>
@@ -107,35 +119,47 @@ footer{
     <div class="logo">MAIN SMASH BURGER</div>
     <nav>
         <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">Contact</a>
-        <a href="#" class="order-btn">ORDER ONLINE</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/923000000000" target="_blank" class="order-btn">ORDER ONLINE</a>
     </nav>
 </header>
 
 <section class="hero">
     <h1>ON THE MENU</h1>
-    <button>CLICK TO ORDER</button>
+    <a href="https://wa.me/923000000000" target="_blank">
+        <button>CLICK TO ORDER</button>
+    </a>
 </section>
 
-<section class="menu-section">
+<section id="menu">
     <div class="menu-title">OUR SPECIALS</div>
 
     <div class="menu-grid">
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Burger">
+            <a href="https://wa.me/923000000000" target="_blank">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+            </a>
             <h3>Classic Smash</h3>
         </div>
 
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Fries">
+            <a href="https://wa.me/923000000000" target="_blank">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+            </a>
             <h3>Fries & Sides</h3>
         </div>
     </div>
 </section>
 
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Delivery: 0311 1266100</p>
+    <p>Location: Your City, Pakistan</p>
+</section>
+
 <footer>
-    © 2026 Main Smash Burgers | Delivery: 03XX-XXXXXXX
+    © 2026 Main Smash Burgers
 </footer>
 
 </body>
