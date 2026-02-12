@@ -1,92 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Main Smash Burgers</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Smash Burgers</title>
 
-        header {
-            background: #e63946;
-            padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
-        }
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#000;
+    color:white;
+}
 
-        .hero {
-            padding: 60px 20px;
-        }
+header{
+    background:#111;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .btn {
-            background: #f1faee;
-            color: black;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
 
-        .menu {
-            padding: 40px 20px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
 
-        .card {
-            background: #222;
-            margin: 15px auto;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-        }
+.order-btn{
+    background:#f4b400;
+    color:black;
+    padding:10px 18px;
+    border-radius:5px;
+}
 
-        footer {
-            background: #000;
-            padding: 15px;
-            margin-top: 40px;
-        }
-    </style>
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:#000;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    background:#f4b400;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.menu-section{
+    padding:50px 40px;
+}
+
+.menu-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.menu-grid{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.menu-item{
+    width:400px;
+    text-align:center;
+}
+
+.menu-item img{
+    width:100%;
+    border-radius:10px;
+}
+
+.menu-item h3{
+    margin-top:15px;
+    font-size:28px;
+}
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    MAIN SMASH BURGERS 🍔
+    <div class="logo">MAIN SMASH BURGER</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+        <a href="#" class="order-btn">ORDER ONLINE</a>
+    </nav>
 </header>
 
 <section class="hero">
-    <h1>Juicy. Fresh. Smashed.</h1>
-    <p>Best Smash Burgers in Town</p>
-    <a href="#menu" class="btn">View Menu</a>
+    <h1>ON THE MENU</h1>
+    <button>CLICK TO ORDER</button>
 </section>
 
-<section id="menu" class="menu">
-    <h2>Our Menu</h2>
+<section class="menu-section">
+    <div class="menu-title">OUR SPECIALS</div>
 
-    <div class="card">
-        <h3>Classic Smash</h3>
-        <p>Double Patty, Cheese, Special Sauce</p>
-        <p><strong>Rs 699</strong></p>
-    </div>
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Burger">
+            <h3>Classic Smash</h3>
+        </div>
 
-    <div class="card">
-        <h3>Spicy Smash</h3>
-        <p>Double Patty, Jalapenos, Spicy Sauce</p>
-        <p><strong>Rs 749</strong></p>
-    </div>
-
-    <div class="card">
-        <h3>Loaded Smash</h3>
-        <p>Triple Patty, Extra Cheese, Bacon</p>
-        <p><strong>Rs 899</strong></p>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Fries">
+            <h3>Fries & Sides</h3>
+        </div>
     </div>
 </section>
 
 <footer>
-    © 2026 Main Smash Burgers | Order Now: 03XX-XXXXXXX
+    © 2026 Main Smash Burgers | Delivery: 03XX-XXXXXXX
 </footer>
 
 </body>
